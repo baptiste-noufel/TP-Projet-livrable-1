@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L01 - Dashboard Énergie | Note de Cadrage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>📊 L01 - Note de Cadrage</h1>
+            <p>Dashboard de Consommation Énergétique</p>
+            <p>WinForms • C# • Windows • Transition Énergétique</p>
+            <span class="badge">🚀 Projet Démarrage 21 Janvier 2026</span>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <button class="nav-btn active" data-section="contexte">📋 Contexte</button>
+            <button class="nav-btn" data-section="objectifs">🎯 Objectifs</button>
+            <button class="nav-btn" data-section="fonctionnalites">⚙️ Fonctionnalités</button>
+            <button class="nav-btn" data-section="architecture">🏗️ Architecture</button>
+            <button class="nav-btn" data-section="personas">👥 Personas</button>
+            <button class="nav-btn" data-section="planning">📅 Planning</button>
+            <button class="nav-btn" data-section="risques">⚠️ Risques</button>
+            <button class="nav-btn" data-section="livrables">📦 Livrables</button>
+            <button class="nav-btn" data-section="equipe">🧑‍💻 Membres de l'équipe</button>
+        </nav>
+
+        <!-- SECTION: Contexte -->
+        <section id="contexte" class="section active">
+            <h2>📋 Contexte & Commanditaire</h2>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h4>🌍 Contexte du Projet</h4>
+                    <p>L'entreprise fictive vise la transition énergétique et la réduction de l'empreinte carbone en centralisant les données énergétiques dispersées dans différents systèmes.</p>
+                </article>
+                <article class="card">
+                    <h4>🎯 Mission Principale</h4>
+                    <p>Concevoir une application Windows en C# avec Windows Forms pour centraliser et visualiser les données énergétiques en temps réel avec une interface ergonomique.</p>
+                </article>
+                <article class="card">
+                    <h4>✅ Objectifs Clés</h4>
+                    <p>Offrir un outil simple, performant et adapté à Windows sans technologies externes, capable de détecter les anomalies de consommation automatiquement.</p>
+                </article>
+            </div>
+
+            <h3>Enjeux & Motivations</h3>
+            <p>Réduire l'empreinte carbone de 25 kWh/an, améliorer la visibilité énergétique et permettre une prise de décision rapide face aux anomalies détectées.</p>
+        </section>
+
+        <!-- SECTION: Objectifs -->
+        <section id="objectifs" class="section">
+            <h2>🎯 Objectifs du Projet</h2>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Centralisation</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Visualisation</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Analyse</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Interface</div>
+                </div>
+            </div>
+
+            <h3>Détails des Objectifs</h3>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h4>🔄 Centralisation des Données</h4>
+                    <p>Centraliser les données provenant de capteurs physiques ou sources simulées pour une gestion efficace et une visibilité complète.</p>
+                </article>
+                <article class="card">
+                    <h4>📈 Affichage Graphique Clair</h4>
+                    <p>Les données énergétiques sont présentées sous forme de graphiques et indicateurs lisibles via Windows Forms.</p>
+                </article>
+                <article class="card">
+                    <h4>🔍 Analyse des Consommations</h4>
+                    <p>Détection des pics de consommation grâce à des seuils prédéfinis pour une meilleure analyse et intervention rapide.</p>
+                </article>
+                <article class="card">
+                    <h4>🖥️ Interface Ergonomique</h4>
+                    <p>Interface intuitive et compatible avec Visual Studio pour une utilisation simple et pédagogique sous Windows.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION: Fonctionnalités -->
+        <section id="fonctionnalites" class="section">
+            <h2>⚙️ Fonctionnalités Clés (WinForms / 100% C#)</h2>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h4>📡 Collecte de Données Locale</h4>
+                    <p>Les données sont collectées via une API ASP.NET Core en C# hébergée localement avec mises à jour régulières programmées.</p>
+                </article>
+                <article class="card">
+                    <h4>🧮 Agrégation et Calcul</h4>
+                    <p>Le traitement comprend des agrégations simples par minute, heure et jour, ainsi que le calcul du kWh total consommé.</p>
+                </article>
+                <article class="card">
+                    <h4>⚡ Détection d'Anomalies</h4>
+                    <p>Détection d'anomalies utilisant des seuils fixes pour identifier rapidement les écarts anormaux dans les données collectées.</p>
+                </article>
+                <article class="card">
+                    <h4>🎨 Interface Graphique Simple</h4>
+                    <p>L'interface Windows Forms intègre un graphique, un tableau des dernières valeurs et des indicateurs visuels pour les alertes.</p>
+                </article>
+            </div>
+
+            <h3>Stack Technologique</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Couche</th>
+                        <th>Technologies</th>
+                        <th>Détails</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Présentation</strong></td>
+                        <td>Windows Forms</td>
+                        <td>Interface graphique desktop</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Backend</strong></td>
+                        <td>ASP.NET Core</td>
+                        <td>API REST en C#</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data</strong></td>
+                        <td>SQLite + EF Core</td>
+                        <td>ORM et base locale légère</td>
+                    </tr>
+                    <tr>
+                        <td><strong>IDE</strong></td>
+                        <td>Visual Studio</td>
+                        <td>Développement complet</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: Architecture -->
+        <section id="architecture" class="section">
+            <h2>🏗️ Architecture Essentielle Windows</h2>
+
+            <h3>Structure Logicielle Simplifiée</h3>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h4>📂 Projets Visual Studio</h4>
+                    <p>La solution comprend deux projets clés : <strong>WinForms</strong> pour l'interface utilisateur et <strong>ASP.NET Core</strong> pour l'API de données.</p>
+                </article>
+                <article class="card">
+                    <h4>🎯 Composants WinForms</h4>
+                    <p>Le projet WinForms gère les formulaires, services métier et modèles de données pour l'interface utilisateur cohérente.</p>
+                </article>
+            </div>
+
+            <h3>Architecture de l'API ASP.NET Core</h3>
+            <p>Le projet API contient les contrôleurs, modèles et services pour la gestion et collecte des données énergétiques.</p>
+
+            <h3>Base de Données SQLite Locale</h3>
+            <p>SQLite est utilisé pour un stockage léger et local, géré via Entity Framework Core pour la simplicité et maintenabilité.</p>
+
+            <h3>Diagramme Simplifié</h3>
+            <pre class="diagramme">
+┌─────────────────┐
+│   WinForms UI   │
+│   (C# Forms)    │
+└────────┬────────┘
+         │ HTTP
+         │
+┌────────▼────────┐
+│  ASP.NET Core   │
+│  API REST       │
+└────────┬────────┘
+         │ EF Core
+         │
+┌────────▼────────┐
+│   SQLite DB     │
+│   (Local)       │
+└─────────────────┘
+            </pre>
+        </section>
+
+        <!-- SECTION: Personas -->
+        <section id="personas" class="section">
+            <h2>👥 Personas Utilisateurs</h2>
+
+            <article class="persona">
+                <h4>👨‍💼 Persona 1 - Marc, Technicien d'Exploitation (45 ans)</h4>
+                <p class="persona-detail"><strong>Contexte :</strong> Technicien polyvalent, gère plusieurs bâtiments. Besoin d'un outil rapide pour repérer des pics et agir.</p>
+                <p class="persona-detail"><strong>Objectifs :</strong> Visualiser les valeurs instantanées, être alerté en cas de dépassement, historiser un minimum.</p>
+                <p class="persona-detail"><strong>Points de douleur :</strong> Interfaces confuses, lenteurs, données incohérentes.</p>
+                <p class="persona-detail"><strong>Scénario d'usage :</strong> Marc ouvre l'app le matin, contrôle la conso de la nuit, détecte un pic anormal et planifie une intervention.</p>
+            </article>
+
+            <article class="persona">
+                <h4>👩‍💼 Persona 2 - Élodie, Responsable Énergie / RSE (38 ans)</h4>
+                <p class="persona-detail"><strong>Contexte :</strong> Responsable de la performance énergétique, prépare des bilans mensuels.</p>
+                <p class="persona-detail"><strong>Objectifs :</strong> Suivre les tendances mensuelles, vérifier la trajectoire de réduction, comparer des périodes.</p>
+                <p class="persona-detail"><strong>Points de douleur :</strong> Données dispersées, exports multiples, manque de lisibilité synthétique.</p>
+                <p class="persona-detail"><strong>Scénario d'usage :</strong> Élodie consulte le tableau de bord mensuel, identifie une dérive en octobre, et demande une analyse des causes.</p>
+            </article>
+        </section>
+
+        <!-- SECTION: Planning -->
+        <section id="planning" class="section">
+            <h2>📅 Planning Détaillé (Démarrage 21 Janvier 2026)</h2>
+
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="date">21 - 30 Janvier 2026</div>
+                    <h4>Phase 1: Cadrage</h4>
+                    <p><strong>Objectifs-clés :</strong> Besoins, périmètre, maquettes</p>
+                    <p><strong>Livrables :</strong> L01 - Note de cadrage</p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="date">2 - 10 Février 2026</div>
+                    <h4>Phase 2: Conception</h4>
+                    <p><strong>Objectifs-clés :</strong> Schémas, choix techniques, protocole de données</p>
+                    <p><strong>Livrables :</strong> L02 - Conception</p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="date">11 Février - 15 Mars 2026</div>
+                    <h4>Phase 3: Développement</h4>
+                    <p><strong>Objectifs-clés :</strong> API ASP.NET Core, UI WinForms, SQLite/EF Core</p>
+                    <p><strong>Livrables :</strong> L03 - Réalisation (code)</p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="date">16 - 27 Mars 2026</div>
+                    <h4>Phase 4: Tests</h4>
+                    <p><strong>Objectifs-clés :</strong> Tests UI, cohérence données, perfs graphiques</p>
+                    <p><strong>Livrables :</strong> MàJ L03 (tests, logs)</p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="date">30 Mars - 10 Avril 2026</div>
+                    <h4>Phase 5: Finalisation</h4>
+                    <p><strong>Objectifs-clés :</strong> Conclusion, NR, docs, soutenance</p>
+                    <p><strong>Livrables :</strong> L04 - Conclusion & L05</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION: Risques -->
+        <section id="risques" class="section">
+            <h2>⚠️ Analyse des Risques</h2>
+
+            <table class="risk-table">
+                <thead>
+                    <tr>
+                        <th>Risque</th>
+                        <th>Probabilité</th>
+                        <th>Impact</th>
+                        <th>Mesure Préventive / Corrective</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="risk-medium">
+                        <td><strong>API indisponible</strong></td>
+                        <td>Moyenne</td>
+                        <td>Forte</td>
+                        <td>Source locale simulée, tests hors-ligne</td>
+                    </tr>
+                    <tr class="risk-high">
+                        <td><strong>Surcharge graphique</strong></td>
+                        <td>Élevée</td>
+                        <td>Moyenne</td>
+                        <td>Rolling window, downsampling, rafraîchissement 1-2 s</td>
+                    </tr>
+                    <tr class="risk-medium">
+                        <td><strong>Données incohérentes</strong></td>
+                        <td>Moyenne</td>
+                        <td>Moyenne</td>
+                        <td>Validations, filtrage outliers</td>
+                    </tr>
+                    <tr class="risk-low">
+                        <td><strong>Lenteurs SQLite</strong></td>
+                        <td>Faible</td>
+                        <td>Moyenne</td>
+                        <td>Index, transactions minimales</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: Livrables -->
+        <section id="livrables" class="section">
+            <h2>📦 Livrables Minimaux</h2>
+
+            <div class="content-grid">
+                <article class="card">
+                    <h4>💻 Application Fonctionnelle</h4>
+                    <p>Une application WinForms fonctionnelle pour assurer la démonstration des fonctionnalités principales du projet.</p>
+                </article>
+                <article class="card">
+                    <h4>📝 Code Structuré</h4>
+                    <p>Le code en C# doit être bien organisé et documenté pour faciliter la maintenance et la compréhension.</p>
+                </article>
+                <article class="card">
+                    <h4>🏗️ Diagramme d'Architecture</h4>
+                    <p>Un diagramme clair et simplifié représentant l'architecture du projet pour une vision globale.</p>
+                </article>
+                <article class="card">
+                    <h4>📚 Documentation</h4>
+                    <p>Mini-documentation avec instructions d'installation et présentation PowerPoint résumant le projet.</p>
+                </article>
+            </div>
+
+            <h3>Contraintes du Projet</h3>
+            <div class="content-grid">
+                <article class="card">
+                    <h4>🪟 Windows Exclusive</h4>
+                    <p>Le projet doit fonctionner uniquement sous Windows pour garantir une intégration parfaite.</p>
+                </article>
+                <article class="card">
+                    <h4>📊 Visual Studio</h4>
+                    <p>Développement réalisé sous Visual Studio, tirant parti des outils complets pour WinForms et ASP.NET Core.</p>
+                </article>
+                <article class="card">
+                    <h4>🎨 Windows Forms</h4>
+                    <p>L'interface graphique utilise Windows Forms, excluant WPF ou MAUI pour simplifier la mise en œuvre.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION: Equipe -->
+        <section id="equipe" class="section section-equipe">
+            <h2 class="team-title">Membres de l'équipe</h2>
+            <p class="team-subtitle">
+                Une équipe complémentaire pour concevoir, développer et tester le dashboard.
+            </p>
+
+            <div class="team-container">
+                <article class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="Halim.jpg" alt="CIFTCI Halim" class="team-photo">
+                    </div>
+                    <div class="team-name-tag">CIFTCI Halim</div>
+                    <p class="team-role">Interface WinForms</p>
+                    <p class="team-desc">Conception des écrans, ergonomie et intégration des composants graphiques.</p>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="Baptiste.jpg" alt="NOUFEL Baptiste" class="team-photo">
+                    </div>
+                    <div class="team-name-tag">NOUFEL Baptiste</div>
+                    <p class="team-role">Données &amp; SQLite</p>
+                    <p class="team-desc">Modélisation des données, persistance locale et optimisation des requêtes.</p>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-photo-wrapper">
+                        <img src="Mathieux.jpg" alt="POUILLAUDE Mathieux" class="team-photo">
+                    </div>
+                    <div class="team-name-tag">POUILLAUDE Mathieux</div>
+                    <p class="team-role">Tests &amp; documentation</p>
+                    <p class="team-desc">Rédaction de la documentation, scénarios de tests et suivi qualité.</p>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>📊 Dashboard de Consommation Énergétique | L01 - Note de Cadrage</p>
+        <p>🚀 Projet démarrage: 21 Janvier 2026 | 🎯 Finalisation: 10 Avril 2026</p>
+        <p class="footer-small">Transition Énergétique • Réduction Carbone • Analyse de Données</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
